@@ -30,5 +30,6 @@ export default {
     text-align: right;
     /* background-color: rgb(8, 5, 54); */
     background-image: linear-gradient(-90deg, #969c9c, #202227);
+    cursor: pointer;
 }
 </style>
