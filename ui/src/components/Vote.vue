@@ -1,7 +1,7 @@
 <template>
   <div class="page-inner" >
     <h1><a id="index２">投票</a></h1>
-    <div v-for="items in itemArray" :key="items">
+    <div v-for="items in itemArray" :key="items.id">
       <div class="presenter-container" width="700" height="500" alt="*">
         <div v-for="item in items" :key="item.id">
           <div><img :src="item.imageUrl" class="rounded-circle" width="250" height="250" alt="*" style="margin: 60px 20px 20px 20px;"></div>

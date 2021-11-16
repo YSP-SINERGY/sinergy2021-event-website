@@ -1,24 +1,11 @@
-# synergy
+# Synergy
 
 ## Project setup
 ```
-yarn install
+docker-compose up --build -d
 ```
 
-### Compiles and hot-reloads for development
+## Access a client page
 ```
-yarn serve
+http://localhost:8001
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
