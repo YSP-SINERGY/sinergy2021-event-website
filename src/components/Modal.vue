@@ -16,7 +16,7 @@
               <p>名前：{{ val.desc }}</p>
               <p>内容：{{ val.range }}</p>
               <!-- <p>：{{ val.lang }}</p> -->
-              <b-button @click="sendVote" variant="secondary" class="col btn-dark-blue btn-rounded">投票</b-button>
+              <b-button @click="$emit('close')" variant="secondary" class="col btn-dark-blue btn-rounded">投票</b-button>
               <!-- <b-button @click="$emit('close')" variant="secondary" >閉じる</b-button> -->
             </slot>
           </div>
@@ -36,36 +36,11 @@
 </template>
 
 <script>
-  import axios from 'axios';
-
   export default {
     name: 'Modal',
     props: {
       val: { type: Object, required: true }
-    },
-    data() {
-      return {
-        error: null,
-      };
-    },
-    methods: {
-      async sendVote() {
-        // make a POST request to vote endpoint
-        let endpoint = "http://localhost:8000/api/v1/votes/";
-        let method = "PATCH";
-        try {
-          await axios({
-            method: method,
-            url: endpoint,
-            data: { id: this.val.id }
-          });
-          alert("投票完了しました。")
-        } catch (error) {
-          this.error = error.response;
-          console.log(this.error);
-        }
-      }
-  }
+    }
   }
 </script>
 
